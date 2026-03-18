@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanzanite Princess FC | Schedule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #f5f0fa; color: #1e102e; }
+    :root { --purple: #3b2465; --purple-light: #6b4f8c; --gold: #d4af37; --gold-soft: #f5e7b2; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .navbar { background: var(--purple); color: white; padding: 16px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .logo h1 { font-size: 1.8rem; font-weight: 800; background: linear-gradient(145deg, #fff, #e2c9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .logo span { font-size: 0.9rem; color: #c7b0ff; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 1.2rem; padding: 6px 0; border-bottom: 3px solid transparent; transition: 0.2s; }
+    .nav-links a.active { border-bottom-color: var(--gold); color: var(--gold-soft); }
+    .lang { background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; display: flex; gap: 10px; }
+    .welcome-card { background: white; border-radius: 28px; padding: 40px; margin: 40px 0; text-align: center; border: 3px solid var(--gold); }
+    .welcome-card h1 { font-size: 3rem; color: var(--purple); }
+    .welcome-card p { font-size: 1.4rem; margin: 20px 0; }
+    .schedule-box { background: #e8d9ff; border-radius: 28px; padding: 30px; margin: 30px 0; border-left: 10px solid var(--gold); }
+    .schedule-item { display: flex; align-items: center; gap: 20px; font-size: 1.5rem; margin: 20px 0; }
+    .schedule-item i { color: var(--purple); width: 50px; }
+    .contact-info { background: white; border-radius: 28px; padding: 30px; margin: 30px 0; }
+    .contact-info h3 { color: var(--purple); margin-bottom: 15px; }
+    .footer { background: var(--purple); color: white; padding: 30px 0; text-align: center; margin-top: 60px; }
+    .btn { background: var(--gold); color: #1e102e; padding: 12px 32px; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-block; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>TANZANITE PRINCESS</h1>
+        <span>ratiba · schedule</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="schedule.html" class="active">Schedule</a>
+      </div>
+      <div class="lang"><span class="active">EN</span> | <span>SW</span></div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="welcome-card">
+      <h1>WELCOME TO <br> TANZANITE PRINCESS FC</h1>
+      <p>Welcome to a new beginning, shared commitment, and purpose as we move forward together to grow and achieve meaningful progress through Football.</p>
+      <div style="font-size:2rem; margin:20px 0;">⚽⚽⚽</div>
+    </div>
+
+    <div class="schedule-box">
+      <h2 style="color:var(--purple); font-size:2rem;">TANZANITE TRAINING SCHEDULES</h2>
+      <div class="schedule-item">
+        <i class="fas fa-calendar-alt"></i>
+        <span>20 February, 2026</span>
+      </div>
+      <div class="schedule-item">
+        <i class="fas fa-clock"></i>
+        <span>Monday to Friday, 08:00 AM</span>
+      </div>
+      <div class="schedule-item">
+        <i class="fas fa-map-pin"></i>
+        <span>Temeke, keko, Dar es Salaam</span>
+      </div>
+      <div style="margin-top:30px;">
+        <a href="#" class="btn"><i class="fas fa-futbol"></i> Join academy</a>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <h3><i class="fas fa-envelope"></i> Contact / Wasiliana</h3>
+      <p><strong>Website:</strong> tanzanitesocceracademy.com</p>
+      <p><strong>Email:</strong> info@tanzaniteprincess.ac.tz  (or 8@gmail.com)</p>
+      <p><strong>Phone:</strong> +255 123 456 789</p>
+      <p><strong>Instagram:</strong> @tanzanite_princess_fc</p>
+      <p style="margin-top:20px;"><i class="fas fa-map-marked-alt"></i> Temeke, Keko, Dar es Salaam, Tanzania, 255</p>
+    </div>
+
+    <!-- extra detail from image: 8@gmail.com appears, we show both -->
+    <div style="background: var(--gold-soft); border-radius: 28px; padding: 20px; text-align: center; margin-bottom: 40px;">
+      <p style="font-size:1.2rem;">📧 tanzanitesocceracademy.com &nbsp; | &nbsp; 8@gmail.com (legacy)</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Tanzanite Princess FC · academy since 2024</p>
+  </footer>
+</body>
+</html>
