@@ -1,146 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tanzanite Princess FC | Home</title>
-  <!-- Font Awesome 6 & Google Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: #f5f0fa; color: #1e102e; }
-    :root { --purple: #3b2465; --purple-light: #6b4f8c; --gold: #d4af37; --gold-soft: #f5e7b2; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    /* navigation */
-    .navbar { background: var(--purple); color: white; padding: 16px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
-    .navbar .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-    .logo h1 { font-size: 1.8rem; font-weight: 800; background: linear-gradient(145deg, #fff, #e2c9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .logo span { font-size: 0.9rem; color: #c7b0ff; letter-spacing: 1px; }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 1.2rem; padding: 6px 0; border-bottom: 3px solid transparent; transition: 0.2s; }
-    .nav-links a.active { border-bottom-color: var(--gold); color: var(--gold-soft); }
-    .nav-links a:hover { border-bottom-color: var(--gold); }
-    .lang { background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; display: flex; gap: 10px; }
-    .lang span { cursor: pointer; opacity: 0.7; }
-    .lang span.active { opacity: 1; color: var(--gold); text-decoration: underline wavy var(--gold); }
-    /* profile card */
-    .profile-card { background: white; border-radius: 28px; padding: 30px; margin: 40px 0; box-shadow: 0 20px 35px rgba(0,0,0,0.1); border: 1px solid #e5d5ff; }
-    .profile-header { display: flex; gap: 30px; flex-wrap: wrap; align-items: center; }
-    .profile-avatar { width: 120px; height: 120px; background: linear-gradient(145deg, var(--purple), #2b1b4a); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--gold); border: 4px solid var(--gold); }
-    .profile-stats { display: flex; gap: 40px; flex-wrap: wrap; }
-    .stat-item { text-align: center; }
-    .stat-number { font-size: 1.8rem; font-weight: 800; color: var(--purple); }
-    .stat-label { color: #5f5a6b; font-weight: 500; }
-    .profile-bio { margin: 20px 0 10px; }
-    .profile-bio h2 { font-size: 1.8rem; color: var(--purple); }
-    .profile-bio p { color: #3f3a4c; }
-    .location { display: flex; align-items: center; gap: 6px; color: #6b5f7a; margin: 8px 0; }
-    .koach { background: #ece5ff; padding: 8px 16px; border-radius: 30px; display: inline-block; margin: 10px 0; font-weight: 600; }
-    .followed-by { display: flex; align-items: center; gap: 20px; margin: 15px 0; }
-    .followed-by img { width: 30px; height: 30px; border-radius: 50%; background: #ccc; }
-    .suggested { background: #f2ebf9; border-radius: 28px; padding: 25px; margin: 30px 0; }
-    .suggested h3 { margin-bottom: 20px; }
-    .suggested-item { display: flex; justify-content: space-between; align-items: center; margin: 15px 0; }
-    .suggested-item .info { display: flex; flex-direction: column; }
-    .suggested-item .name { font-weight: 700; }
-    .suggested-item .desc { color: #5d4f73; font-size: 0.9rem; }
-    .btn { background: var(--gold); color: #1e102e; padding: 10px 28px; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-block; border: none; cursor: pointer; }
-    .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
-    .btn-group { display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
-    /* princess jersey element */
-    .jersey-card { background: linear-gradient(145deg, #2b1b4a, var(--purple)); color: white; border-radius: 28px; padding: 30px; margin: 40px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 2px solid var(--gold); }
-    .jersey-number { font-size: 6rem; font-weight: 800; line-height: 1; color: var(--gold); text-shadow: 4px 4px 0 #1e102e; }
-    .jersey-details { text-align: right; font-size: 1.8rem; letter-spacing: 5px; }
-    .footer { background: var(--purple); color: white; padding: 30px 0; text-align: center; margin-top: 60px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzanite Princess FC – Home</title>
+    <!-- Font Awesome 6 & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+        body { background:#faf9ff; color:#1e102e; line-height:1.6; }
+        :root {
+            --purple-deep: #2c1a4a;
+            --purple: #4a2c7a;
+            --purple-light: #7a5eb0;
+            --gold: #d4af37;
+            --gold-light: #f5e7b2;
+            --white: #ffffff;
+            --shadow: 0 20px 35px -8px rgba(0,0,0,0.15);
+        }
+        .container { max-width:1280px; margin:0 auto; padding:0 30px; }
+
+        /* Navigation */
+        nav {
+            background: var(--purple-deep);
+            color: white;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        .nav-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        .logo span {
+            font-size: 0.9rem;
+            color: #c7b0ff;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-weight: 600;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 5px;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            border-bottom-color: var(--gold);
+            color: var(--gold-light);
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(145deg, var(--purple), #1f1235);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "⚽";
+            font-size: 25rem;
+            position: absolute;
+            bottom: -70px;
+            right: -30px;
+            opacity: 0.05;
+            color: var(--gold);
+            transform: rotate(15deg);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .hero h2 span {
+            color: var(--gold);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 25px 0 20px;
+            opacity: 0.9;
+        }
+        .hero .location {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 25px;
+            border-radius: 50px;
+            width: fit-content;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .hero .coach {
+            font-size: 1.2rem;
+            background: var(--gold);
+            color: #1e102e;
+            padding: 8px 25px;
+            border-radius: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+        .hero-image {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="%234a2c7a" stroke="%23d4af37" stroke-width="8"/><text x="200" y="210" font-size="120" text-anchor="middle" fill="%23d4af37" font-weight="800" dy=".3em">#1</text><text x="200" y="300" font-size="30" text-anchor="middle" fill="white">TANZANITE</text><text x="200" y="340" font-size="30" text-anchor="middle" fill="white">PRINCESS</text></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 350px;
+            width: 100%;
+        }
+        /* Welcome Section */
+        .welcome {
+            background: white;
+            border-radius: 50px;
+            padding: 50px;
+            margin: 60px 0;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .welcome h3 {
+            font-size: 2.5rem;
+            color: var(--purple-deep);
+            margin-bottom: 20px;
+        }
+        .welcome p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .jersey-number {
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-shadow: 4px 4px 0 var(--purple-deep);
+        }
+        .jersey-detail {
+            background: var(--purple-deep);
+            color: white;
+            padding: 40px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .btn {
+            background: var(--gold);
+            color: #1e102e;
+            padding: 14px 35px;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        .btn:hover {
+            background: #c6a229;
+            transform: scale(1.05);
+        }
+        footer {
+            background: #1a0f2a;
+            color: #bbb;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        footer a { color: var(--gold); text-decoration: none; }
+    </style>
 </head>
 <body>
-  <nav class="navbar">
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1>TANZANITE PRINCESS FC</h1>
+                <span>Akademia ya Mabingwa</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h2>Welcome to <span>Tanzanite Princess</span> Football Academy</h2>
+                <p>Official page · Ukurasa rasmi</p>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Temeke, Keko, Dar es Salaam, Tanzania, 255</div>
+                <div class="coach"><i class="fas fa-user-graduate"></i> Koach Steve</div>
+            </div>
+            <div class="hero-image"></div>
+        </div>
+    </section>
+
     <div class="container">
-      <div class="logo">
-        <h1>TANZANITE PRINCESS</h1>
-        <span>official page · ukurasa rasmi</span>
-      </div>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="schedule.html">Schedule</a>
-      </div>
-      <div class="lang">
-        <span class="active">EN</span> | <span>SW</span>
-      </div>
-    </div>
-  </nav>
+        <div class="welcome">
+            <h3>New Beginning, Shared Purpose</h3>
+            <p>“Welcome to a new beginning, shared commitment, and purpose as we move forward together to grow and achieve meaningful progress through Football.”</p>
+        </div>
 
-  <div class="container">
-    <!-- profile card (instagram style) -->
-    <div class="profile-card">
-      <div class="profile-header">
-        <div class="profile-avatar">
-          <i class="fas fa-futbol"></i>
+        <div class="jersey-detail">
+            <div>
+                <div class="jersey-number">#1</div>
+                <div style="font-size: 2rem; letter-spacing: 8px;">0 7 1 4 0 1</div>
+            </div>
+            <div>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234a2c7a' stroke='%23d4af37' stroke-width='5'/%3E%3Ctext x='50' y='70' font-size='40' text-anchor='middle' fill='%23d4af37' font-weight='800'%3E⚽%3C/text%3E%3C/svg%3E" alt="ball" style="width:100px;">
+            </div>
         </div>
-        <div class="profile-stats">
-          <div class="stat-item"><span class="stat-number">684</span> <span class="stat-label">friends</span></div>
-          <div class="stat-item"><span class="stat-number">2,551</span> <span class="stat-label">followers</span></div>
-          <div class="stat-item"><span class="stat-number">3,343</span> <span class="stat-label">following</span></div>
-        </div>
-      </div>
-      <div class="profile-bio">
-        <h2>tanzanite_princess_fc</h2>
-        <p><strong>Sport and recreation</strong><br>Official Page of Tanzanite Princess Fc<br>Temeke, keko, Dar es Salaam, Tanzania, 255</p>
-        <div class="location"><i class="fas fa-map-marker-alt"></i> Dar es Salaam</div>
-        <div class="koach"><i class="fas fa-user-cog"></i> Koach Steve · 1 recent post</div>
-        <div class="followed-by">
-          <span>Followed by </span>
-          <span><strong>box2boxtz</strong></span> and <span><strong>eliud_myula</strong></span>
-        </div>
-      </div>
-      <div class="btn-group">
-        <button class="btn">Follow</button>
-        <button class="btn btn-outline">Message</button>
-        <button class="btn btn-outline">Contact</button>
-      </div>
     </div>
 
-    <!-- suggested accounts -->
-    <div class="suggested">
-      <h3>Suggested for you <a href="#" style="float:right; color:var(--purple);">See All</a></h3>
-      <div class="suggested-item">
-        <div class="info">
-          <span class="name">kids_oasistz</span>
-          <span class="desc">Kid's oasis · KID'S OASISTZ · 0624 472 025</span>
-        </div>
-        <button class="btn" style="padding:6px 16px;">Follow</button>
-      </div>
-      <div class="suggested-item">
-        <div class="info">
-          <span class="name">hamisi_mahrezy</span>
-          <span class="desc">Frenando Morientes · frenandomorientes.com</span>
-        </div>
-        <button class="btn" style="padding:6px 16px;">Follow</button>
-      </div>
-    </div>
-
-    <!-- princess jersey element (from second image) -->
-    <div class="jersey-card">
-      <div class="jersey-number">#1</div>
-      <div class="jersey-details">
-        <div>TANZANITE PRINCESS</div>
-        <div style="font-size:2rem; letter-spacing:8px;">0 7 1 4 0 1</div>
-      </div>
-    </div>
-
-    <!-- welcome snippet (link to full schedule) -->
-    <div style="background:white; border-radius:28px; padding:30px; margin:40px 0; text-align:center; border:2px dashed var(--gold);">
-      <h2 style="color:var(--purple);">WELCOME TO TANZANITE PRINCESS FC</h2>
-      <p style="margin:15px 0;">New beginning, shared commitment – through football.</p>
-      <a href="schedule.html" class="btn">View training schedule</a>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <p>© 2026 Tanzanite Princess FC · Temeke, Dar es Salaam</p>
-  </footer>
+    <footer>
+        <p>© 2026 Tanzanite Princess FC · Temeke, Dar es Salaam</p>
+        <p>Play fair, Be Positive · Cheza haki, Kuwa na chanya</p>
+    </footer>
 </body>
 </html>
