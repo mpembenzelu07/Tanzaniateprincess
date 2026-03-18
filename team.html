@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzanite Princess FC – Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+        body { background:#faf9ff; color:#1e102e; line-height:1.6; }
+        :root {
+            --purple-deep: #2c1a4a;
+            --purple: #4a2c7a;
+            --purple-light: #7a5eb0;
+            --gold: #d4af37;
+            --gold-light: #f5e7b2;
+            --white: #ffffff;
+            --shadow: 0 20px 35px -8px rgba(0,0,0,0.15);
+        }
+        .container { max-width:1280px; margin:0 auto; padding:0 30px; }
+        nav { background: var(--purple-deep); color: white; padding: 18px 0; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
+        .nav-flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .logo h1 { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #fff, var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo span { font-size: 0.9rem; color: #c7b0ff; }
+        .nav-links { display: flex; gap: 30px; font-weight: 600; }
+        .nav-links a { color: white; text-decoration: none; font-size: 1.1rem; transition: 0.3s; border-bottom: 3px solid transparent; padding-bottom: 5px; }
+        .nav-links a:hover, .nav-links a.active { border-bottom-color: var(--gold); color: var(--gold-light); }
+        .page-header { background: var(--purple); color: white; padding: 60px 0; text-align: center; }
+        .page-header h2 { font-size: 3rem; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin: 50px 0; }
+        .team-card { background: white; border-radius: 40px; padding: 30px; box-shadow: var(--shadow); text-align: center; }
+        .team-card .avatar { width: 150px; height: 150px; background: var(--purple-light); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--gold); border: 4px solid var(--gold); }
+        .team-card h3 { font-size: 1.8rem; color: var(--purple-deep); }
+        .team-card .role { color: var(--purple); font-weight: 600; margin: 10px 0; }
+        .team-card .detail { margin-top: 15px; }
+        footer { background: #1a0f2a; color: #bbb; text-align: center; padding: 30px 0; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1>TANZANITE PRINCESS FC</h1>
+                <span>Akademia ya Mabingwa</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="team.html" class="active">Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h2>Our Team · Timu Yetu</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="team-grid">
+            <!-- Coach -->
+            <div class="team-card">
+                <div class="avatar"><i class="fas fa-user-graduate"></i></div>
+                <h3>Koach Steve</h3>
+                <div class="role">Head Coach · Kocha Mkuu</div>
+                <div class="detail">Leading the team with passion and experience.</div>
+            </div>
+            <!-- Top Scorer -->
+            <div class="team-card">
+                <div class="avatar"><i class="fas fa-futbol"></i></div>
+                <h3>Nasma Hassan Kessy</h3>
+                <div class="role">Top Scorer · Mfungaji Bora</div>
+                <div class="detail">36 goals in the U17 league, 2024/2025 season.</div>
+            </div>
+            <!-- Captain (placeholder) -->
+            <div class="team-card">
+                <div class="avatar"><i class="fas fa-star"></i></div>
+                <h3>#1 Jersey</h3>
+                <div class="role">071401 · Squad number</div>
+                <div class="detail">The pride of Tanzanite Princess.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Tanzanite Princess FC · Team</p>
+    </footer>
+</body>
+</html>
