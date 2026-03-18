@@ -82,24 +82,24 @@
             border-bottom-color: var(--gold);
             color: #fff;
         }
-        /* Hero Section */
+        /* Hero Section - with new background image */
         .hero {
             min-height: 85vh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            /* New background image (SVG) - all previous background effects removed */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="%233d2a5c" stroke="%23d4af37" stroke-width="8"/><text x="200" y="130" font-size="32" text-anchor="middle" fill="%23d4af37" font-weight="800" letter-spacing="2">ZANTEPR</text><text x="200" y="250" font-size="120" text-anchor="middle" fill="%23d4af37" font-weight="800" dy=".3em">13</text><text x="200" y="320" font-size="28" text-anchor="middle" fill="%23ffffff" font-weight="600" letter-spacing="1.5">TANCANTE PRINCES</text></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-color: #0b0710; /* fallback */
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
+        /* Remove any pseudo-elements that were previously used */
+        .hero::before,
+        .hero::after {
+            display: none;
         }
         .hero-grid {
             display: grid;
@@ -143,18 +143,9 @@
             border: 1px solid var(--gold);
             color: var(--gold-soft);
         }
-        /* New Hero Image based on provided picture */
+        /* The hero-image div is no longer needed, but we keep it empty for grid spacing */
         .hero-image {
-            background: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .hero-image svg {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.7));
+            /* empty - background handles the visual */
         }
         /* Welcome Card */
         .welcome-card {
@@ -180,7 +171,7 @@
             max-width: 800px;
             margin: 30px auto;
         }
-        /* Jersey Detail (retained from previous design, but we already have the new hero) */
+        /* Jersey Detail */
         .jersey-premium {
             background: linear-gradient(145deg, var(--purple-deep), #100a1a);
             border-radius: 60px;
@@ -266,17 +257,7 @@
                 <div class="coach"><i class="fas fa-user-graduate"></i> Koach Steve</div>
             </div>
             <div class="hero-image">
-                <!-- New SVG based on the provided image -->
-                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Background circle (purple) -->
-                    <circle cx="200" cy="200" r="180" fill="#3d2a5c" stroke="#d4af37" stroke-width="8"/>
-                    <!-- Text "ZANTEPR" at top -->
-                    <text x="200" y="130" font-size="32" text-anchor="middle" fill="#d4af37" font-weight="800" letter-spacing="2">ZANTEPR</text>
-                    <!-- Large number 13 -->
-                    <text x="200" y="250" font-size="120" text-anchor="middle" fill="#d4af37" font-weight="800" dy=".3em">13</text>
-                    <!-- Text "TANCANTE PRINCES" at bottom -->
-                    <text x="200" y="320" font-size="28" text-anchor="middle" fill="#ffffff" font-weight="600" letter-spacing="1.5">TANCANTE PRINCES</text>
-                </svg>
+                <!-- This div is intentionally left empty; the background image now fills the right side -->
             </div>
         </div>
     </section>
@@ -287,7 +268,6 @@
             <p>Shared commitment and purpose as we move forward together to grow and achieve meaningful progress through Football.</p>
         </div>
 
-        <!-- Retained the jersey detail for consistency (optional, but we keep it) -->
         <div class="jersey-premium">
             <div class="jersey-number">#1</div>
             <div class="jersey-digits">0 7 1 4 0 1</div>
