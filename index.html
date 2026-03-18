@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanzanite Princess FC – Home</title>
+    <title>Tanzanite Princess FC | Home</title>
     <!-- Font Awesome 6 & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-        body { background:#faf9ff; color:#1e102e; line-height:1.6; }
-        :root {
-            --purple-deep: #2c1a4a;
-            --purple: #4a2c7a;
-            --purple-light: #7a5eb0;
-            --gold: #d4af37;
-            --gold-light: #f5e7b2;
-            --white: #ffffff;
-            --shadow: 0 20px 35px -8px rgba(0,0,0,0.15);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container { max-width:1280px; margin:0 auto; padding:0 30px; }
-
-        /* Navigation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0710;
+            color: #f0e9ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        :root {
+            --purple-deep: #1e102e;
+            --purple: #3d2a5c;
+            --purple-light: #6b4f8c;
+            --gold: #d4af37;
+            --gold-soft: #f5e7b2;
+            --glass: rgba(255, 255, 255, 0.05);
+            --shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        /* Premium Navigation */
         nav {
-            background: var(--purple-deep);
-            color: white;
-            padding: 18px 0;
+            background: rgba(30, 16, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: var(--shadow);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
         .nav-flex {
             display: flex;
@@ -41,138 +54,171 @@
         .logo h1 {
             font-size: 2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #fff, var(--gold-light));
+            background: linear-gradient(135deg, #fff, var(--gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.2;
+            letter-spacing: -0.5px;
         }
         .logo span {
-            font-size: 0.9rem;
-            color: #c7b0ff;
+            font-size: 0.85rem;
+            color: #a78fc7;
+            letter-spacing: 2px;
         }
         .nav-links {
             display: flex;
             gap: 30px;
-            font-weight: 600;
         }
         .nav-links a {
-            color: white;
+            color: #e0d0ff;
             text-decoration: none;
+            font-weight: 600;
             font-size: 1.1rem;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
             transition: 0.3s;
-            border-bottom: 3px solid transparent;
-            padding-bottom: 5px;
         }
         .nav-links a:hover,
         .nav-links a.active {
             border-bottom-color: var(--gold);
-            color: var(--gold-light);
+            color: #fff;
         }
-        /* Hero */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(145deg, var(--purple), #1f1235);
-            color: white;
-            padding: 80px 0;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
             position: relative;
             overflow: hidden;
         }
-        .hero::after {
-            content: "⚽";
-            font-size: 25rem;
+        .hero::before {
+            content: '';
             position: absolute;
-            bottom: -70px;
-            right: -30px;
-            opacity: 0.05;
-            color: var(--gold);
-            transform: rotate(15deg);
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
         }
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 50px;
             align-items: center;
         }
         .hero h2 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.1;
         }
         .hero h2 span {
             color: var(--gold);
+            text-shadow: 0 0 15px rgba(212,175,55,0.5);
         }
         .hero p {
             font-size: 1.2rem;
-            margin: 25px 0 20px;
-            opacity: 0.9;
+            color: #cbbde2;
+            margin: 25px 0 30px;
+            max-width: 500px;
         }
         .hero .location {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: rgba(255,255,255,0.1);
-            padding: 12px 25px;
-            border-radius: 50px;
-            width: fit-content;
-            font-weight: 600;
-            margin-bottom: 15px;
+            gap: 12px;
+            background: var(--glass);
+            backdrop-filter: blur(5px);
+            padding: 12px 28px;
+            border-radius: 60px;
+            border: 1px solid rgba(212,175,55,0.3);
+            font-weight: 500;
+            margin-bottom: 20px;
         }
         .hero .coach {
-            font-size: 1.2rem;
-            background: var(--gold);
-            color: #1e102e;
-            padding: 8px 25px;
-            border-radius: 40px;
             display: inline-block;
-            font-weight: 700;
+            background: linear-gradient(145deg, var(--purple), #2b1b4a);
+            padding: 8px 25px;
+            border-radius: 60px;
+            font-weight: 600;
+            border: 1px solid var(--gold);
+            color: var(--gold-soft);
         }
         .hero-image {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="%234a2c7a" stroke="%23d4af37" stroke-width="8"/><text x="200" y="210" font-size="120" text-anchor="middle" fill="%23d4af37" font-weight="800" dy=".3em">#1</text><text x="200" y="300" font-size="30" text-anchor="middle" fill="white">TANZANITE</text><text x="200" y="340" font-size="30" text-anchor="middle" fill="white">PRINCESS</text></svg>');
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="%233d2a5c" stroke="%23d4af37" stroke-width="8"/><text x="200" y="210" font-size="120" text-anchor="middle" fill="%23d4af37" font-weight="800" dy=".3em">#1</text><text x="200" y="300" font-size="30" text-anchor="middle" fill="%23ffffff">TANZANITE</text><text x="200" y="340" font-size="30" text-anchor="middle" fill="%23ffffff">PRINCESS</text></svg>');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            height: 350px;
+            height: 450px;
             width: 100%;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.7));
         }
-        /* Welcome Section */
-        .welcome {
-            background: white;
+        /* Welcome Card */
+        .welcome-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212,175,55,0.2);
             border-radius: 50px;
+            padding: 60px 40px;
+            margin: 80px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .welcome-card h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .welcome-card p {
+            font-size: 1.4rem;
+            color: #d4c0ff;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+        /* Jersey Detail */
+        .jersey-premium {
+            background: linear-gradient(145deg, var(--purple-deep), #100a1a);
+            border-radius: 60px;
             padding: 50px;
             margin: 60px 0;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        .welcome h3 {
-            font-size: 2.5rem;
-            color: var(--purple-deep);
-            margin-bottom: 20px;
-        }
-        .welcome p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .jersey-number {
-            font-size: 6rem;
-            font-weight: 800;
-            color: var(--gold);
-            text-shadow: 4px 4px 0 var(--purple-deep);
-        }
-        .jersey-detail {
-            background: var(--purple-deep);
-            color: white;
-            padding: 40px;
-            border-radius: 50px;
             display: flex;
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin-top: 40px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 20px 30px -10px #000;
+        }
+        .jersey-number {
+            font-size: 8rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+            line-height: 1;
+        }
+        .jersey-digits {
+            font-size: 2.5rem;
+            letter-spacing: 10px;
+            background: rgba(212,175,55,0.1);
+            padding: 20px 30px;
+            border-radius: 80px;
+            border: 1px dashed var(--gold);
+        }
+        /* Footer */
+        footer {
+            background: #080412;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(212,175,55,0.3);
+            margin-top: 80px;
+        }
+        footer p {
+            color: #9b8ab0;
         }
         .btn {
-            background: var(--gold);
+            background: linear-gradient(145deg, var(--gold), #b38f2c);
             color: #1e102e;
-            padding: 14px 35px;
+            padding: 14px 40px;
             border-radius: 60px;
             font-weight: 700;
             text-decoration: none;
@@ -181,27 +227,20 @@
             border: none;
             cursor: pointer;
             font-size: 1.1rem;
+            box-shadow: 0 8px 15px -5px #d4af37;
         }
         .btn:hover {
-            background: #c6a229;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px -5px #d4af37;
         }
-        footer {
-            background: #1a0f2a;
-            color: #bbb;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
-        }
-        footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
 <body>
     <nav>
         <div class="container nav-flex">
             <div class="logo">
-                <h1>TANZANITE PRINCESS FC</h1>
-                <span>Akademia ya Mabingwa</span>
+                <h1>TANZANITE PRINCESS</h1>
+                <span>ACADEMY OF CHAMPIONS</span>
             </div>
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
@@ -217,9 +256,9 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <h2>Welcome to <span>Tanzanite Princess</span> Football Academy</h2>
-                <p>Official page · Ukurasa rasmi</p>
-                <div class="location"><i class="fas fa-map-marker-alt"></i> Temeke, Keko, Dar es Salaam, Tanzania, 255</div>
+                <h2>Where <span>Royalty</span> Meets the Pitch</h2>
+                <p>Official page of Tanzanite Princess FC – Temeke, Keko, Dar es Salaam.</p>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Temeke, Keko, Dar es Salaam, 255</div>
                 <div class="coach"><i class="fas fa-user-graduate"></i> Koach Steve</div>
             </div>
             <div class="hero-image"></div>
@@ -227,25 +266,19 @@
     </section>
 
     <div class="container">
-        <div class="welcome">
-            <h3>New Beginning, Shared Purpose</h3>
-            <p>“Welcome to a new beginning, shared commitment, and purpose as we move forward together to grow and achieve meaningful progress through Football.”</p>
+        <div class="welcome-card">
+            <h3>WELCOME TO A NEW BEGINNING</h3>
+            <p>Shared commitment and purpose as we move forward together to grow and achieve meaningful progress through Football.</p>
         </div>
 
-        <div class="jersey-detail">
-            <div>
-                <div class="jersey-number">#1</div>
-                <div style="font-size: 2rem; letter-spacing: 8px;">0 7 1 4 0 1</div>
-            </div>
-            <div>
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234a2c7a' stroke='%23d4af37' stroke-width='5'/%3E%3Ctext x='50' y='70' font-size='40' text-anchor='middle' fill='%23d4af37' font-weight='800'%3E⚽%3C/text%3E%3C/svg%3E" alt="ball" style="width:100px;">
-            </div>
+        <div class="jersey-premium">
+            <div class="jersey-number">#1</div>
+            <div class="jersey-digits">0 7 1 4 0 1</div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Tanzanite Princess FC · Temeke, Dar es Salaam</p>
-        <p>Play fair, Be Positive · Cheza haki, Kuwa na chanya</p>
+        <p>© 2026 Tanzanite Princess FC · Play fair, Be Positive</p>
     </footer>
 </body>
 </html>
